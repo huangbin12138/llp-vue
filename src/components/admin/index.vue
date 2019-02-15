@@ -31,8 +31,6 @@
       },
     },
     beforeCreate(){
-      localStorage.setItem('goBack', -2);
-      localStorage.getItem('adminStatus') || this.$router.push('/admin/login');
     },
     created(){},
   }

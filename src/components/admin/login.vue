@@ -21,24 +21,22 @@
 <script>
   export default {
     name: "login",
-    data(){
+    data() {
       return {
         username: '',
         password: '',
       }
     },
     methods: {
-      closeLogin(){
-        let go = localStorage.getItem('goBack') || -1;
-        localStorage.removeItem('goBack');
-        this.$router.go(go);
+      closeLogin() {
+        this.$router.go(-1);
       },
-      login(){
+      login() {
         let {username, password} = this;
-        if(!username) {
+        if (!username) {
           return this.$toast('请填写用户名！');
         }
-        if(!password) {
+        if (!password) {
           return this.$toast('请填写密码！')
         }
         this.$ajax('', {
