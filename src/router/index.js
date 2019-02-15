@@ -74,7 +74,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   let loginType = localStorage.getItem('loginType');
   document.title = to.meta.title || 'some one';
-  if(/^\/?admin/g.test(to.path) && loginType !== 2 && !/\/?admin\/login/.test(to.path)){
+  if(/^\/?admin/g.test(to.path) && loginType !== '2' && !/\/?admin\/login/.test(to.path)){
     return next('/admin/login');
   }
   next();

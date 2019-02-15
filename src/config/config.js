@@ -1,5 +1,6 @@
 module.exports = {
-  url_api: 'http://localhost/php/',
-  // url_api: '/php/',
+  // url_api: 'https://llprogrammer.com/php/',
+  // url_api: 'http://localhost/php/',
+  url_api: '/php/',
   OK: 200
 }

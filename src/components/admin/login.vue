@@ -43,9 +43,11 @@
           username,
           password,
           type: 'login',
-          login_type: 1
+          login_type: 2
         }).then(res => {
-
+          console.log(res);
+          localStorage.setItem('loginType', 2);
+          this.$router.replace('/admin');
         }).catch(this.$err);
       }
     },

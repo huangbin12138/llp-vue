@@ -27,7 +27,7 @@ axios.defaults.method = 'POST';
 Vue.prototype.axios = axios;
 Vue.prototype.$err = function (err) {
   if(err.code){
-    g.$toast(err.msg || '');
+    g.$toast(err.msg || err.data || '');
   } else {
     g.$toast('网络错误！');
   }
