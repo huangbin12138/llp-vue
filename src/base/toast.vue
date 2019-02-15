@@ -18,14 +18,14 @@
       }
     },
     methods: {
-      inits(){
+      inits() {
         this.isShow = true;
         setTimeout(() => {
           this.opacity = 1;
-          this.duration && setTimeout(() => this.close(), this.duration * 1);
+          this.duration && setTimeout(this.close, this.duration * 1);
         }, 100);
       },
-      close(){
+      close() {
         this.opacity = 0;
         setTimeout(() => {
           this.isShow = false;
@@ -55,7 +55,7 @@
         default: ''
       }
     },
-    mounted () {
+    mounted() {
       this.inits();
     }
   }
